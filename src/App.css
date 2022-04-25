@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background-image: url(../src/images/todo-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  height: 40rem;
+  max-height: 40rem;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+  border-top: 1px solid rgba(221, 221, 221, 0.5);
+  border-left: 1px solid rgba(210, 210, 210, 0.5);
+}
+
+.header h1{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 15px 0;
+  font-family: Poppins;
+}
+
+.task-input{
+  outline: none;
+  width: 260px;
+  padding: 15px 0 15px 15px;
+  margin-right: 25px;
+  font-size: 20px;
+  color: #ccc;
+  background-color: #000000;
+  border: 1px solid rgba(254,25,125,255);
+  border-radius: 6px;
+}
+
+.button-add{
+  width: 70px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 0;
+  background-color: rgba(254,25,125,255);
+  color: white;
+  cursor: pointer;
+  transition: all .2s ease;
+  border-top: 1px solid rgb(249, 172, 218);
+  border-left: 1px solid rgb(235, 51, 165);
+}
+
+.button-add:hover{
+  background-color: rgb(207, 33, 108);
+}
+
+.list-item{
+  display: flex;
+  margin: 20px 0 ;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: black;
+  padding: 10px 0;
+  max-height: 30px;
+}
+
+#input-1{
+  background-color: black;
+}
+
+.task-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 24px;
+  border-radius: 50%;
+  margin-left: 18px;
+}
+
+.button-complete{
+  color: lightgreen;
+}
+
+.button-edit{
+  color: #e2d029;
+}
+
+.button-delete{
+  color: crimson;
+}
+
+.complete{
+  text-decoration: solid line-through #ff6c6c;
+  opacity: 0.6;
+}
+
+.list{
+  width: 220px;
+  background-color: #12343b;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-left: 15px;
+}
+
+input:focus,
+button:focus{
+  outline: none;
+}
+
+@media screen and (max-width: 524px) {
+  .app-wrapper{
+    width: 320px;
+    padding: 10px 10px;
+  }
+  
+  .task-input{
+    width: 280px;
+    margin-right: 0;
+  }
+
+  .button-add{
+    margin: 10px auto ;
+  }
+  
+  .task-button {
+    margin-left: 0;
+  }
+  .button-complete{
+    display: none;
+  }
+  
+  .button-edit{
+    display: none;
+  }
+}
